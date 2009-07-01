@@ -42,9 +42,19 @@ set :use_sudo, false
 # Passenger
 #############################################################
 namespace :passenger do
+  
+  desc "Set GEM_PATH in environment"
+  task :set_gem_path do
+	run "mv #{current_release}/config/environment.rb #{current_release}/config/environment.rb.bak"
+ 	run "echo ENV[\\'GEM_PATH\\']=\\'#{gem_path}\\' >> #{current_release}/config/environment.rb"
+ 	run "cat #{current_release}/config/environment.rb.bak >> #{current_release}/config/environment.rb"
+ 	run "rm #{current_release}/config/environment.rb.bak"
+  end
+
   desc "Restart Application"
   task :restart do
     rake app:render 
+	set_gem_path
     run "touch #{applicationdir}/tmp/restart.txt"
   end
 end
