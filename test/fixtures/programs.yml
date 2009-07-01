@@ -1,0 +1,10 @@
+one:
+  id: 1
+  name: MyString
+  key: MyString
+  enable: false
+two:
+  id: 2
+  name: MyString
+  key: MyString
+  enable: false

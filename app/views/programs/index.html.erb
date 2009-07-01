@@ -1,0 +1,25 @@
+<h1>Listing Programs</h1>
+
+<table width="900" border="1" align="center">
+  <tr>
+	<th width="5%">ID</th>
+    <th width="30%">Name</th>
+    <th width="40%">Key</th>
+    <th width="10%">Enable</th>
+  </tr>
+  <%- @programs.each do |program|%>
+    <tr align="center" >
+	  <td><%=h program.id %></td>
+      <td><%=h program.name %></td>
+      <td><%=h program.key %></td>
+      <td><%=h program.enable %></td>
+    
+      <!-- td>< %=link_to 'Show', object_url(program) % ></td -->
+      <td><%=link_to 'Edit', edit_object_url(program) %></td>
+      <td><%=link_to 'Destroy', object_url(program), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<br/>
+
+<%= link_to 'New Program', new_object_url %>
