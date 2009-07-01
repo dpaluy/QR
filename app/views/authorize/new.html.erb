@@ -1,0 +1,14 @@
+<h1>Authorize Service</h1>
+
+<% form_tag :method => 'post' do %>
+  <p>
+	<label for="id">ID:</label>
+    <%= text_field_tag :id, params[:id] %>
+	<br />
+	<label for="key">Key:</label>
+    <%= text_field_tag :key, params[:key] %>
+
+	<br />
+    <%= submit_tag "Authorize", :name => nil %>
+  </p>
+<% end %>

@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :programs
+  map.connect 'emm/:id/:key', :controller => 'authorize', :action => :new
 
   # The priority is based upon order of creation: first created -> highest priority.
 
