@@ -1,0 +1,235 @@
+2009-05-11
+  * Fiexed the attachment and attachments tags
+
+2009-05-28
+  * Refactored account_access now current_account (account logged) is aviable in our roles
+  * Fix a typo in column_model
+  * Little refactoring in account model because now mapping is not necessary
+  * Improved Ext Components, now for example we can render in the same page multiple components without conflicts
+  * Removed some unusued methods
+  * Reject nil values from Ext Configuration
+  * Fixed raising errors in grid editor
+  * Updated controller generator, now accept ajax request
+
+2009-05-27
+  * Added new column renderer see: http://api.lipsiadmin.com/classes/Lipsiadmin/Ext/ColumnModel.html
+  * Added a new datetime editor
+  * Litte fix in AccountAccess.roles now return empty array if no roles instead rescue an error
+
+2009-05-26
+  * Fixed validates_attachment_content_type_for, now accepts correctly regex
+  * Added a attachment_tag for autogenerate html for upload one file/image
+  * Added a attachemnts_tag autogenerate html for upload multiple file/image and order them
+  * Added a open_standard_grid for simplify use of ext window with ours grids.
+  * Improved attachment generator
+
+2009-05-21
+  * Removed some grids defaults
+  * Added attacher_name in before_save
+  * Started a new task for translate models for I18n
+  * Fix a bug in account.rb
+  * Added ImageMagick requirements to gem
+  * Improved doc
+  * Allow models to have multiple attachments definitions
+  
+2009-05-18
+  * Small fix in generation of account access
+  * Fix an issue in backend_page generator
+
+2009-05-15
+  * Bumped version to 4.1.0
+  * Now admin can be completly translated in any languages
+  * Refactored generation of grids
+  * Improved documentation of helpers
+  * Fixed rdoc typos
+  * Imporved backend helpers and rdoc
+  * Added a frontend helper for keywords
+
+2009-05-11
+  * Bumped version to 4.0.0
+  * Added editable grids
+  * Refactored backend.js so javascript in tabs are evaluated after render so you can interact with tabs
+  * Refactored Backend.window so now you can do much more with your grids/forms. See rdoc for examples.
+  * Small refactor to attachment processor, now original attachments are saved without "_original_" in the filename.
+
+2009-05-07
+  * Fixed a problem with WithoutTable
+  * Removed unusued routes
+  * Fix few typos
+  * Require at least Rails 2.2.x
+  
+2009-04-30
+  * Fix a small typo in extgrid
+  * Fix a dependency problem in lipsiadmin rake tasks
+
+2009-04-29
+  * Added :displayInfo => true in generators of grids
+  * Fixed a problem with dependencies
+
+2009-04-23
+  * Fix rdoc for grid view
+  * Fix a bug override default ext component methods
+
+2009-04-20
+  * Fix compatibility issues with ruby 1.9
+  * Added a new module for background workers
+  * Little formatting to tab helper for accept custom options
+  * Fix rdoc for open_window helper
+
+2009-04-10
+  * Added startup test for account
+  * Added raketasks for init test and autotest
+
+2009-03-24
+  * Fix landescape mode in pdf builder
+
+2009-03-18
+  * Removed an unused menu locales dir
+  * Updated the readme with new generators
+
+2009-03-17
+  * Bump to version 3.3.3
+  * Fix a typo in attachment migration
+  
+2009-03-16
+  * Bump to version 3.3.2
+  * Updated locales for work with rails 2.3.2 (do rake lipsiadmin:update:locales)
+
+2009-03-14
+  * Bump to version 3.3.1
+  * Removed debug code from state_session_controller
+  * Fix mistake in ux.js [Joseph]
+  
+2009-03-13
+  * Improve licensed PD4ML detection, now will look first into vendor/pd4ml
+  * Bump to version 3.3
+  * Fixed a bug with responds_to_parent
+  * Added a new generator for build database state session for extjs (script/generate state_session)
+  * Added a new utils for use your licensed (if you have it) pd4ml jar
+  * Fix pluralization when lipsiadmin generate migrations (attachment)
+  * Removed debug info in lipsiadmin rake
+  
+2009-03-10
+  * Fixed some typos in attachment table [Vakiliy]
+
+2009-03-10
+  * Bump to version 3.2
+  * Fixed a problem with has_one_attachment
+  * Fixed few typo in api doc for attachments
+
+2009-03-05
+  * Bump to version 3.1
+  * Added a base login page for frontend
+  * Added a new generator for frontend
+  * Fixed a Typo in Authentication
+  * Fixed an issue with frontend_login_required
+  * Removed from backend generator frontend stuff
+  * Small Fix in Backend Controller
+  * Fixed Spelling Issue
+
+2009-03-02
+  * Release the stable version 3.0
+
+2009-02-28
+  * Fixed a small js error on dblclick on grids
+  * Added for Ext::Component a new method for remove listener, remove_listener 
+  * Added for Ext::Component a new alias for grid.on, called add_listener
+  * Fixed problem with generation of template for boolean cols
+  * Improvement in Backend.js, now mask() when clean()
+  * Fixed Attachment for get many styles
+  * Added a new method in Ext::Component for generate on the fly extjs objects
+  * Small refactoring in Ext::Component
+  * Small refactoring in Ext::Grid
+  * Fixed a small errror in Ext::Store
+
+2009-02-27
+  * Added as default sm :checkbox
+  * Fixed a litte padding in firefox for datetimefield
+  * Fixed a typo in account.rb
+  * Fixed attachment creation for new records
+  * Fixed a little problem with the generation of the attachment table
+  * Added an options for prevent sending email, usefull for test rescue but not email report
+  * Fixed a translation in backend_helper
+  * Fixed a double render action in pdf
+  * Added send_data as an options in pdf builder (for the controller)
+  * Fixed the en locale for backend
+  * Added scope to the component events
+  * Added a new task for update javascripts (add require 'lipsiadmin_tasks' if you don't have yet in your RakeFile)
+  * Fixed padding in DateTime Field for firefox
+  * Removed not necessary frontend images 
+  * Extended Ext Component to be more flexible
+  * Small refactoring of ext components
+
+2009-02-26
+  * Removed a grid unusued var
+  * Added a new method to grid for getSelection
+  * Added a as default grid.on("dblclick", edit)
+  * Added a component handler (eg. grid.on(:dblclick, ...))
+  * Fixed a litte error in date renderer
+  * Fixed a litte error in Ext.form.DateTimeField
+  * Added a padding for exceptions in standard.css
+  * Fixed a litte error in backend.js
+  * Fixed update, for force text/html header
+  * Added two helpers to ext for mask, unmask Backend.app
+  * Improved the exception_notifier and rescue templates for backend
+  * Fixed ext_alert helper
+  * Fixed ext_date_select
+  * Fixed a little problem in exception notifier
+  * Added a rescue if association not found in column_store
+  * Improved documentation of box helper
+  * Fixed a missing localization in box helper
+  * Added :start => :close/:ope to the box helper
+  * Added :style => "mystyle" to the box helper
+  * Added in grid builder (edit, new, destroy) path for toolbar
+  * Little reformat to Lipsiadmin::Controller::Ext::ColumnStore
+  * Added new renderer in column model (boolean, eur_money, us_money)
+  * Updated the remember file of script/generate backend_page
+  * Improved store_data :include etc... see documentation Lipsiadmin::Controller::Ext for more details
+  * Fixed a dataIndex conditions
+  * Imporoved mapping columns for a better search
+
+2009-02-25
+  * Improved documentation now is online here http://api.lipsiasoft.com
+  * Refactored text_field, text_area, password_field helpers
+  * Refactored country_select helper
+  * Refactored ext_date_select, ext_datetime_select helpers
+  
+2008-02-24
+  * Rename Js app from Lipsiadmin.app to Backend.app
+  * Added the possibility to reuse pages/froms/grids in windows.
+  * Removed all external plugins
+  * Rewritten Attachment creation
+  * Rewritten Authentication and Menu creation
+  * Rewritten all Helpers (now more fast)
+  * Added a new helper for build extjs calendar (eg. ext_datetime :model, :created_at)
+  * Added a new helper for build ext box
+  * Included the missing country_select
+  * Added helpers for build rjs grids
+  * Grid by default have a search box that is no longer clientside but serverside
+  * Improved html tags using the extjs stylesheets
+  * Improved performances of javascript
+  * Minimized ExtJs and Rails javascripts
+  * Added a support request
+  * Added an exception notifier
+  * Rewritten pdf builder and helper
+  * Added a pdf builder for actionmailer
+  * Added method missing in ActiveRecord to intercept calls to non-localized methods (eg. name instead of name_cz)
+  * Added utility scopes for paginate, include, search
+  * Added a new literal method for prevent json to "strignify" javascripts funtctions (eg. "function() { alert('me')}".to_l)
+  * Added a new module for escape utf8 chars for servers that don't have java with utf8 fonts (it's used by pdf builder)
+  
+2008-05-21
+  * Added a new PDF generator, we don't need the expensive PRINCEXML, we can use pd4ml
+
+2008-05-12.
+  * Added a manifest that show the current routes that are necessary to add
+
+2008-05-09.
+  * Added ext-all-debug.js (Was autodetect if env == development)
+  * Removed menuitems table and added new module project 
+  * Improve Auth System with project modules
+  * Initial rdoc documentation
+  * Removed from admin view list to index so we can use cruds
+  * Improve Admin -> Accounts for add project modules
+  * Added new class AccessControl (Documented)
+  * New config file for roles, modules in initializers/access_rules.rb

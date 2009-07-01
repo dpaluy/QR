@@ -1,0 +1,73 @@
+==Lipsiadmin
+
+Lipsiadmin is a new revolutionary admin for your projects.
+
+Is developped by http://www.lipsiasoft.com that use it from 3 years in production enviroments.
+
+Lipsiadmin is based on Ext Js 2.2 framework (with prototype adapter) works with Rails 2+
+
+This admin is for newbie developper but also for experts, is not entirely written in javascript 
+because the aim of developper wose build in a agile way web/site apps so we use extjs in a new 
+intelligent way a mixin of <tt>old</tt> html and new ajax functions, 
+for example ext manage the layout of page, grids, tree and errors, but form are in html code.
+
+Author:: Davide D'Agostino
+Copyright:: Copyright (c) 2009 Lipsiasoft s.r.l. (http://www.lipsiasoft.com)
+License:: MIT License (http://www.opensource.org/licenses/mit-license.php)
+WebSite:: http://www.lipsiadmin.com
+Api Documentation:: http://api.lipsiadmin.com
+Community:: http://groups.google.com/group/lipsiadmin
+Twitter:: http://twitter.com/daddye
+
+==Requirements
+
+* Rails 2+
+* Haml 2+
+
+==Installation
+
+  $ sudo gem install lipsiadmin
+  
+Then in your config/environment.rb
+  
+  config.gem "lipsiadmin", :version => "< 5.0"
+  
+Why we need to specify version?
+
+Simply because we mantain backward compatibility until a 5.0 version.
+This mean that before v 5.0 we only do small improvemets, bug fix, doc etc...
+
+If you want install the edge version you can simply do:
+  
+  gem install haml
+  script/plugin install git://github.com/Lipsiasoft/lipsiadmin.git
+
+Remember that for use your attachment processor (Paperclip) you need ImageMagick installed
+on your sistem
+  
+==Examples
+
+now run script/generate and you can see some like:
+
+  Installed Generators
+    Builtin: controller, integration_test, mailer, migration, model, etc..
+    Lipsiadmin: attachment, backend, backend_page, pdf, loops
+
+So you can do:
+
+  $ script/generate backend                # Generate the base admin
+  $ script/generate backend_page yourmodel # Generate a "scaffold" for your model
+  $ script/generate state_session          # Create a "scaffold" for store extjs grid settings in db
+  $ script/generate loops                  # Generate background workers
+  $ script/generate frontend               # Generate the base frontend
+  $ script/generate attachment             # Generate the an attachments
+  $ script/generate pdf PdfName            # Generate a new pdf document
+
+==Contribute
+
+Please contribute in coding, patch, and submitting translation api documentation, suggestion etc...
+
+Official Site can be found here:: http://www.lipsiadmin.com
+Community can be found here:: http://groups.google.com/group/lipsiadmin
+Api documentation can be found here:: http://api.lipsiasoft.com
+Follow us on twitter:: http://twitter.com/daddye
