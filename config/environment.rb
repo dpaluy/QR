@@ -20,7 +20,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "rails", :version => '2.3.2'
-  config.gem "twitter", :version => '>=0.6.12'
+#  config.gem "twitter", :version => '>=0.6.12'
   config.gem 'giraffesoft-resource_controller', :lib => 'resource_controller', :version => '>=0.6.5', :source => 'http://gems.github.com'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
