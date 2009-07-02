@@ -14,19 +14,19 @@ class AuthorizeController < ApplicationController
 			if program.key == key
 				program.enable = true
 				if program.save!
-					flash[:notice] = "Thank you for purchasing #{program.name}"
+					flash.now[:notice] = "Thank you for purchasing #{program.name}"
 					redirect_to :action => :thanks
 				else
-					flash[:error] = "Error enabling the program #{program.name}. Try again!"
+					flash.now[:error] = "Error enabling the program #{program.name}. Try again!"
 				end
 			else
-				flash[:error] = "Wrong Key"
+				flash.now[:error] = "Wrong Key"
 			end
 		else
-			flash[:error] = "Unrecognized program"
+			flash.now[:error] = "Unrecognized program"
 		end
 	else
-		flash[:error] = "Please provide authorization paramters"
+		flash.now[:error] = "Please provide authorization paramters"
 	end
   end
 

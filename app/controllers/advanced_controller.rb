@@ -4,13 +4,26 @@ class AdvancedController < ApplicationController
     @program = nil
 	if params[:id]
 		@program = Program.find(params[:id])
-		flash[:notice] = "You are watching #{@program.name}" unless @program.nil?
+		flash.now[:notice] = "You are watching #{@program.name}" unless @program.nil?
 	else
-		flash[:error] = "Please specify program id"
+		flash.now[:error] = "Please specify program id"
 	end
   end
 
   def tweet
+    if (!params[:program_id].nil? && program = Program.find(params[:program_id]))
+		begin
+			httpauth = Twitter::HTTPAuth.new('ta25', 'Klepa78')
+			base = Twitter::Base.new(httpauth)
+			base.update("I am watching very interesting program '#{program.name}'")
+			falsh[:notice] = "Twitter updated successfuly!"
+		rescue
+			flash[:error] = "Error updating Tweeter!"
+		end
+	else
+		flash[:error] = "Please specify program id to Tweet"
+	end
+    redirect_to root_path
   end
 
 end

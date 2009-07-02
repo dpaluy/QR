@@ -3,8 +3,8 @@
 <% unless @program.nil? -%>
 <h2>Please, Select an action</h2>
 <ol>
-	<li><%= link_to "Tweet This", 'http://twitter.com/home/?status=I+am+watching+great+program+\''+@program.name+'\'' %></li>
-   	<li><%= link_to "Get More Info", 'http://www.imdb.com/find?s=all&q=#{@program.name}&x=0&y=0' %></li>
+	<li><%= link_to "Tweet This", :action => 'tweet', :program_id => @program.id %></li>
+   	<li><%= link_to "Get More Info", "http://www.imdb.com/find?s=all&q=#{@program.name}&x=0&y=0" %></li>
 	<li><%= link_to "Get Discount", 'http://svn.paluy.org/' %></li>
     <li><%= link_to "Today's Best Deal", 'http://www.amazon.com/RSpec-Book-Behaviour-Development-Cucumber/dp/1934356379/ref=sr_1_1?ie=UTF8&s=books&qid=1246568305&sr=8-1' %></li>
 </ol>
