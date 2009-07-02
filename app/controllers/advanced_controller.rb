@@ -18,7 +18,7 @@ class AdvancedController < ApplicationController
 			base.update("I am watching very interesting program '#{program.name}'")
 			falsh[:notice] = "Twitter updated successfuly!"
 		rescue
-			flash[:error] = "Error updating Tweeter!"
+			flash[:error] = "Error updating Twitter!"
 		end
 	else
 		flash[:error] = "Please specify program id to Tweet"
