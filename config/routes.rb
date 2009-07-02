@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :programs
-  map.connect 'emm/:id/:key', :controller => 'authorize', :action => :new, :conditions => { :method => :post }
+  map.connect 'adv/:id', :controller => 'advanced'
+#  map.connect 'emm/:id/:key', :controller => 'authorize', :action => :new, :conditions => { :method => :get }
 
 
   # The priority is based upon order of creation: first created -> highest priority.
