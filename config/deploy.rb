@@ -47,7 +47,7 @@ namespace :deploy do
   desc "This to do once we get the code up"
   task :after_update_code, :roles => :app, :except => { :no_release => true } do
 #	run "ln -nfs #{deploy_to}/#{shared_dir}/config/database.yml #{release_path}/config/database.yml"
-    run "cd #{release_path} && rake gems:install"
+#    run "cd #{release_path} && rake gems:install"
 #    run "cd #{release_path} && RAILS_ENV=#{stage} ./script/runner Sass::Plugin.update_stylesheets"
     run "cd #{release_path} && RAILS_ENV=production rake db:migrate"
   end
