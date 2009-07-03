@@ -4,7 +4,6 @@ class AdvancedController < ApplicationController
     @program = nil
 	if params[:id]
 		@program = Program.find(params[:id])
-		flash.now[:notice] = "You are watching #{@program.name}" unless @program.nil?
 	else
 		flash.now[:error] = "Please specify program id"
 	end
@@ -23,7 +22,7 @@ class AdvancedController < ApplicationController
 	else
 		flash[:error] = "Please specify program id to Tweet"
 	end
-    redirect_to root_path
+    redirect_to :back
   end
 
 end

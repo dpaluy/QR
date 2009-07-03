@@ -42,7 +42,15 @@ a {
   border: solid 1px #C66;
 }
 
+.GREEN {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
 
+.RED {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
 
 .fieldWithErrors {
   display: inline;

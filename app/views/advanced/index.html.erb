@@ -1,6 +1,7 @@
 <h1>Advanced menu</h1>
 <br />
 <% unless @program.nil? -%>
+<p>You are watching <b><%= @program.name %></b></p>
 <h2>Please, Select an action</h2>
 <ol>
 	<li><%= link_to "Tweet This", :action => 'tweet', :program_id => @program.id %></li>
