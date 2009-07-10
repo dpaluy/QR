@@ -3,10 +3,13 @@ class CreatePrograms < ActiveRecord::Migration
     create_table :programs do |t|
       t.string :name
       t.string :key
-      t.boolean :enable
+      t.boolean :enable, :default => false
 
       t.timestamps
     end
+
+	program = Program.new(:name => "Iron Man", :key => "1234")
+	program.save!
   end
 
   def self.down
