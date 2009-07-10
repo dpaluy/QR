@@ -19,7 +19,8 @@ class TweetController < ApplicationController
 	else
 		flash[:notice] = "Twitter updated successfully: #{message}"
 	end
-	redirect_back_or_default '/'
+	back_addr = (params[:program_id].blank?)? "/" : "adv/#{params[:program_id]}"
+	redirect_back_or_default back_addr
   end
 
 end
