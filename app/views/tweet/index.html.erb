@@ -1,0 +1,13 @@
+<h1>Tweeting</h1>
+<fieldset>
+<% form_tag :action => 'update' do %>
+  <p>
+	<h3>Your message:</h3>
+	<br />
+    <%= text_field_tag :msg, params[:msg], :size => '140' %>
+
+	<br />
+    <%= submit_tag "Update", :name => nil %>
+  </p>
+<% end %>
+</fieldset>

@@ -4,7 +4,7 @@
 <p>You are watching <b><%= @program.name %></b></p>
 <h2>Please, Select an action</h2>
 <ol>
-	<li><%= link_to "Tweet This", :action => 'tweet', :program_id => @program.id %></li>
+	<li><%= link_to "Tweet This", :controller => 'tweet', :action => 'update', :program_id => @program.id %></li>
    	<li><%= link_to "Visit Iron Man web site", "http://ironmanmovie.marvel.com/" %></li>
 	<li><%= link_to "Get Discount", 'http://svn.paluy.org/' %></li>
     <li><%= link_to "Today's Best Deal", 'http://www.amazon.com/Iron-Man-Vol-1-Extremis/dp/0785122583/ref=sr_1_5?ie=UTF8&s=books&qid=1246786904&sr=1-5' %></li>
