@@ -14,11 +14,8 @@ Rails::Initializer.run do |config|
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
-  # Specify gems that this application depends on and have them installed with rake gems:install
-  # config.gem "bj"
-  # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
-  # config.gem "sqlite3-ruby", :lib => "sqlite3"
-  # config.gem "aws-s3", :lib => "aws/s3"
+  config.gem 'twitter-auth', :lib => 'twitter_auth'
+  config.gem 'oauth', :version => '0.3.5'
   config.gem "rails", :version => '2.3.2'
 #  config.gem "twitter", :version => '>=0.6.12'
   config.gem 'giraffesoft-resource_controller', :lib => 'resource_controller', :version => '>=0.6.5', :source => 'http://gems.github.com'
