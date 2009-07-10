@@ -1,6 +1,6 @@
 class TweetController < ApplicationController
   
-  before :login_required
+  before_filter :login_required
 
   def index
   end
