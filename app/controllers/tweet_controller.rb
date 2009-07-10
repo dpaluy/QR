@@ -16,9 +16,9 @@ class TweetController < ApplicationController
 	if 	@tweet.nil?
 		flash[:error] = "Error updating Twitter!"
 	else
-		flash[:notice] = "Tweeting successfully:\n #{@tweet.text}"
+		flash[:notice] = "Twitter updated successfully:\n #{message}"
 	end
-	redirect_back_or_default "/advanced"
+	redirect_back_or_default '/'
   end
 
 end
