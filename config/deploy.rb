@@ -3,13 +3,13 @@
 #############################################################
 set :user, 'ndsti'  # Your dreamhost account's username
 set :project, 'NDS_QR'  # Your application as its called in the repository
-set :account_domain, 'demo.paluy.org'
+set :account_domain, '***************'
 
 
 #############################################################
 # Servers
 #############################################################
-set :domain, "paluy.org"  # Dreamhost servername where your account is located 
+set :domain, "**************"  # Dreamhost servername where your account is located 
 set :application, "#{account_domain}"  # Your app's location (domain or sub-domain name as setup in panel)
 set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost setup
 set :gem_path, '/home/ndsti/.gems:/usr/lib/ruby/gems/1.8'
@@ -22,9 +22,9 @@ role :db,  domain, :primary => true
 # Subversion
 #############################################################
 set :scm, :subversion
-set :scm_username, 'dpaluy'
-set :scm_password, 'Pups78'
-set :repository, "http://svn.paluy.org/projects/#{project}/trunk/"
+set :scm_username, '********'
+set :scm_password, '********'
+set :repository, "*************************"
 set :checkout, "export"
 
 # deploy config
